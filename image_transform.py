@@ -42,13 +42,10 @@ def scroll():
 
 def scale():
     filterTest = [
-        #f"[0:v]scale=8000x4000,zoompan=z='min(zoom+0.0015,1.5)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=125"
         f"scale=iw*4:ih*4,zoompan=z='if(lte(mod(on,60),30),zoom+0.002,zoom-0.002)':x='iw/2-(iw/zoom)/2':y='ih/2-(ih/zoom)/2':d=25*5"
     ]
     filters = ",".join(filterTest)
     return filters
-
-######
 
 
 input_file = input("Enter the name of input file : ")
